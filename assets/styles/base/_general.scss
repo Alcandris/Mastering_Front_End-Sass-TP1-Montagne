@@ -1,0 +1,51 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: $font2;
+    min-height: 100vh ;
+    color: $color3;
+    background: url(../img/bg.jpg) fixed;
+    background-position: center;
+    background-size: cover;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color2;
+        animation: animBefore 1.5s ease forwards;
+        animation-delay: 20ms;
+        @keyframes animBefore {
+            to{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+a{
+    font-family: $font2;
+    color: $color2;
+    text-decoration: none;
+    transition: all 5ms ease-in-out;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1,h2,h3{
+    font-family: $font1;
+    text-transform: uppercase;
+}
